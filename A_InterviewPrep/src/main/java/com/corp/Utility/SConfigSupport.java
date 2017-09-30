@@ -15,9 +15,12 @@ public class SConfigSupport
 		String data0 = null;
 		try
 		{
+			System.out.println("Hello This is fetchinhg...");
+			System.out.println("This is Branch2");
 			System.out.println("This is Branch1");
 			System.out.println("This is GitClass");
-			Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/students", null);
+			Connection conn = DriverManager.getConnection(
+					"jdbc:mysql://127.0.0.1:3306/students", null);
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT * FROM Customers");
 			data0 = rs.getString("");
